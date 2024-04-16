@@ -1,17 +1,21 @@
 package com.example.moviesapp.core.navigation
 
+import android.content.Context
+import android.content.Intent
+import com.example.moviesapp.feature.auth.credential.Authenticator
+import com.example.moviesapp.feature.login.ui.Login
+
 /**
  * this class contains all intent (Explicit & Implicit)
  */
-class Navigation( /* private val auth:Authenticator */) {
+class Navigation(private val auth: Authenticator) {
 
-    fun nextActivity() {
-        /*
-         if auth.isUserLogin()
-            go to main activity
-         else
-            go to login activity
-        */
+    fun nextActivity(context: Context) {
+
+        if (auth.isUserLogin()) {
+            TODO(/*go to main activity*/)
+        } else {
+            context.startActivity(Intent(context, Login::class.java))
+        }
     }
-
 }
