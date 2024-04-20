@@ -12,6 +12,6 @@ class RouteActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        navigation.nextActivity(baseContext)
+        navigation.nextActivity(baseContext.applicationContext)
     }
 }

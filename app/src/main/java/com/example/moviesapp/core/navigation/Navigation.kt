@@ -13,7 +13,7 @@ class Navigation(private val auth: Authenticator) {
     fun nextActivity(context: Context) {
 
         if (auth.isUserLogin()) {
-            TODO(/*go to main activity*/)
+
         } else {
             context.startActivity(Intent(context, Login::class.java))
         }
